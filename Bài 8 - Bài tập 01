@@ -1,0 +1,36 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+    
+    string balanceSum ( int a[],int n){
+        int sum=0;
+        int leftsum=0;
+        for ( int i=0 ; i<n ; i++){
+            sum+=a[i];
+        }
+        for ( int i=0 ; i<n ; i++){
+            if ( leftsum == sum - leftsum -a[i]){
+                return "YES";
+            }
+                leftsum+=a[i];
+            }
+            
+                return "NO";
+        }
+    
+    int main(){
+        int T;
+        cin >>T;
+    
+    while (T--){
+        int n;
+        cin >> n;
+        int a[n];
+        for ( int i=0 ; i<n ; i++){
+            cin >> a[i];
+        }
+        string s= balanceSum(a,n);
+        cout << s << endl;
+    }
+}
+
