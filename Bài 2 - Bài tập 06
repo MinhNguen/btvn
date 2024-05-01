@@ -1,0 +1,25 @@
+#include <cmath>
+#include <cstdio>
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+class Student{
+    public:
+    int age;
+    string first_name;
+    string last_name;
+    int standard;
+    
+};
+
+int main() {
+    /* Enter your code here. Read input from STDIN. Print output to STDOUT */  
+    Student s;
+    cin >> s.age >> s.first_name >> s.last_name >> s.standard;
+    cout << s.age << endl;
+    cout << s.last_name << "," <<" " << s.first_name  << endl;
+    cout << s.standard << endl;
+    cout << endl << s.age << "," << s.first_name << ","<< s.last_name << ","<<s.standard; 
+    return 0;
+}
